@@ -32,3 +32,13 @@ function pulse(side, timer1, timer2)
 	redstone.setOutput(side, false)
 	sleep(timer2)
 end
+
+function isListEmpty(list)
+	expect(1, list, "table")
+	
+	for _, _ in pairs(list) do
+		return false
+	end
+	
+	return true
+end
