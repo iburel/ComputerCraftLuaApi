@@ -34,7 +34,11 @@ function pulse(side, timer1, timer2)
 end
 
 function isListEmpty(list)
-	expect(1, list, "table")
+	expect(1, list, "table", "nil")
+	
+	if list == nil then
+		return true
+	end
 	
 	for _, _ in pairs(list) do
 		return false
