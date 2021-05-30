@@ -42,3 +42,16 @@ function isListEmpty(list)
 	
 	return true
 end
+
+function findItemPos(items, name)
+	expect(1, items, "table")
+	expect(2, name, "string")
+
+	for i, itemDesc in pairs(items) do
+		if itemDesc.name == name then
+			return i
+		end
+	end
+
+	return -1
+end
