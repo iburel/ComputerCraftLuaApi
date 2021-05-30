@@ -43,6 +43,14 @@ function isListEmpty(list)
 	return true
 end
 
+function printItemList(items)
+	expect(1, items, "table")
+
+	for i, itemDesc in pairs(items) do
+		print(i .. " : " .. itemDesc.name)
+	end
+end
+
 function findItemPos(items, name)
 	expect(1, items, "table")
 	expect(2, name, "string")
